@@ -1,0 +1,15 @@
+//
+//  File.swift
+//  IgniteStarter
+//
+//  Created by Ashish Dwivedi on 15/03/25.
+//
+
+import Foundation
+
+enum Constants {
+    static let name = "Simple! Minesweepr"
+    static let titleSuffix = " My Awesome Introduction"
+    static let url = URL(static: "https://ashshdwvdi.github.io")
+    static let author = "Ashish Dwivedi"
+}

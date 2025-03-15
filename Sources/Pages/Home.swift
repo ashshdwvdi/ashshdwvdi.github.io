@@ -5,7 +5,10 @@ struct Home: StaticPage {
     var title = "Home"
 
     var body: some HTML {
-        Text("Hello world!")
-            .font(.title1)
+        NavigationBar(logo: "@ashshdwvdi") {
+            Link("Resume 📑", target: URL(static: "/resume.pdf"))
+        }
+        .navigationBarStyle(.light)
     }
 }
+
