@@ -1,2 +1,0 @@
-# ashshdwvdi.github.io
-Introduction
