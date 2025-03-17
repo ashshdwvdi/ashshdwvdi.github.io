@@ -15,4 +15,9 @@ enum Constants {
     static let resumeLink = StaticString(stringLiteral: "/resume.pdf")
     static let githubLink = StaticString(stringLiteral:"https://github.com/ashshdwvdi")
     static let linkedin = StaticString(stringLiteral:"https://www.linkedin.com/in/ashish-dwivedi-05616115a")
+    
+    static let socialLinks: [SocialLink] = [
+        .init(url: Constants.githubLink, icon: "images/github.png"),
+        .init(url: Constants.linkedin, icon: "images/linkedin.png"),
+    ]
 }

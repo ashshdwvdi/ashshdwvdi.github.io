@@ -6,6 +6,7 @@ struct MainLayout: Layout {
         Body {
             content
             IgniteFooter()
+            SocialView(Constants.socialLinks)
         }
     }
 }
