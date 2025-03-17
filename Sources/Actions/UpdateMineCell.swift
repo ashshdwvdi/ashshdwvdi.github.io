@@ -25,6 +25,7 @@ public struct UpdateMineCell: Action {
         return """
         let button = document.getElementById('\(id)');
         button.innerText = '\(points)';
+        button.style.backgroundColor = 'grey' 
         """
     }
 }
