@@ -9,11 +9,11 @@ import Foundation
 import Ignite
 
 final class MineSweeper: HTML {
-    static let rows = 10
-    static let cols = 10
+    static let rows = 9
+    static let cols = 9
     var body: some HTML {
         Text {
-            "🏜️ Desert Safari 🏜️"
+            "🏜️ Cactus Sweeper 🏜️"
         }
         .horizontalAlignment(.center)
         .margin(.top, .xLarge)
@@ -26,15 +26,18 @@ final class MineSweeper: HTML {
             ForEach(0..<Self.rows) { row in
                 Text {
                     ForEach(0..<Self.cols) { col in
-                        Button(
-                            Text("\(col)")
+                        Button {
+                            Text(String(format: "%02d", 0))
                                 .font(.title6)
-                                .foregroundStyle(.white)
-                        )
+                                .foregroundStyle(.clear)
+                        } actions: {
+                            UpdateMineCell(id: "\(row)\(col)")
+                        }
                         .role(.none)
                         .type(.plain)
                         .buttonSize(.large)
                         .background((col + row) % 2 == 0 ? .sandyBrown : .saddleBrown)
+                        .id("\(row)\(col)")
                     }
                 }
                 .horizontalAlignment(.center)
