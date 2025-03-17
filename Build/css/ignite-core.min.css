@@ -762,3 +762,31 @@ code, pre {
 
 
 
+.animation-t4GGp {
+        animation: animation-t4GGp-appear 1.0s ease-in-out;
+    }
+
+.animation-t4GGp.appeared {
+    animation: animation-t4GGp-appear 1.0s ease-in-out;
+    animation-fill-mode: none;
+    animation-direction: automatic;
+    
+}
+
+@keyframes animation-t4GGp-appear {
+        0% {
+        transform: translateX(0)
+    }
+            25% {
+        transform: translateX(10px)
+    }
+            50% {
+        transform: translateX(0)
+    }
+            75% {
+        transform: translateX(10px)
+    }
+            100% {
+        transform: translateX(0)
+    }
+}
