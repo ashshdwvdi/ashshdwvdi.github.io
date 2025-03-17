@@ -32,7 +32,7 @@ struct SocialView: HTML {
     
     private func makeSocialLink(_ url: StaticString, with icon: String) -> some InlineElement {
         Link(target: url.description) {
-            Image(icon)
+            Image(icon, description: icon.description)
                 .resizable()
                 .frame(width: 24, height: 24)
         }
