@@ -8,7 +8,6 @@ struct Home: StaticPage {
         NavigationBar(logo: "@ashshdwvdi") {
             Link("Resume 📑", target: URL(static: Constants.resumeLink))
         }
-        .navigationBarStyle(.light)
     }
 }
 
