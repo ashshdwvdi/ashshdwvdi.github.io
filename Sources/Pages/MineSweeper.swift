@@ -9,8 +9,8 @@ import Foundation
 import Ignite
 
 final class MineSweeper: HTML {
-    static let rows = 9
-    static let cols = 9
+    private let game = GameEngine().start()
+    
     var body: some HTML {
         Text {
             "🏜️ Cactus Sweeper 🏜️"
@@ -23,15 +23,15 @@ final class MineSweeper: HTML {
         .padding(.bottom)
         
         VStack(spacing: 0) {
-            ForEach(0..<Self.rows) { row in
+            ForEach(0..<self.game.solvedState.count) { row in
                 Text {
-                    ForEach(0..<Self.cols) { col in
+                    ForEach(0..<self.game.solvedState[0].count) { col in
                         Button {
-                            Text(String(format: "%02d", 0))
+                            Text("🪨")
                                 .font(.title6)
                                 .foregroundStyle(.clear)
                         } actions: {
-                            UpdateMineCell(id: "\(row)\(col)")
+                            UpdateMineCell(id: "\(row)\(col)", for: self.game.solvedState[row][col])
                         }
                         .role(.none)
                         .type(.plain)
